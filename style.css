@@ -1,0 +1,384 @@
+/* Reset CSS */
+*{
+  padding: 0;
+  margin: 0;
+}
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.clear::after{
+  content: '';
+  clear: both;
+  display: block;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+}
+.mid-width{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+body{
+  background-color: #F8F8F8;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* Header CSS */
+.header-section{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.header-left{
+  width: 30%;
+}
+.header-left img{
+  width: 250px;
+  cursor: pointer;
+}
+
+.header-menu{
+  width: 70%;
+}
+.primary-menu{
+  width: 100%;
+  text-align: right;
+}
+.primary-menu ul{}
+.primary-menu ul li{
+  display: inline-block;
+}
+.first-clr a span{
+  color: #C69453;
+}
+.primary-menu ul li a{
+  display: block ;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 58px;
+  color: #DDD;
+}
+.line::after{
+  content: '';
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #C69453;
+  transition: .5s;
+  transform: scaleX(0);
+}
+.line:hover::after{
+  transform: scaleX(1);
+}
+
+.primary-menu ul li a i{
+  font-size: 16px;
+}
+.primary-menu ul li a:hover{
+  color: #C69453;
+}
+
+/* Dropdown menu */
+.primary-menu ul li{
+  position: relative;
+}
+.primary-menu ul li ul{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 200px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  transform: scaleY(0);
+  transform-origin: top center;
+  border: 1px solid #ddd;
+  border-top: none;
+  z-index: 999;
+}
+.primary-menu ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+.primary-menu ul li ul li{
+  display: block;
+  text-align: center;
+  margin-left: -1px;
+}
+.primary-menu ul li ul li a{
+  color: #555;
+}
+
+/* hover effect */
+.primary-menu ul li ul li a:hover{
+  color: #C69453;
+  background-color: #ddd;
+}
+
+
+/* banner-section */
+.banner-section{
+  background: url(img/banner.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 200px 0;
+  position: relative;
+  z-index: 9;
+}
+.banner-section::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+.banner{
+  color: #fff;
+}
+.banner h1{
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.banner h2{
+  margin-bottom: 40px;
+  z-index: 1;
+  font-size: 30px;
+  position: relative;
+}
+.banner h2::after{
+  content: '';
+  width: 80px;
+  height: 2px;
+  z-index: -1;
+  background-color: #ddd;
+  top: 15px;
+  left: 280px;
+  position: absolute;
+}
+.banner h2::before{
+  content: '';
+  width: 80px;
+  height: 2px;
+  z-index: -1;
+  background-color: #ddd;
+  top: 15px;
+  left: 780px;
+  position: absolute;
+}
+.banner a{
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #C69453;
+  color: #fff;
+  transition: .5s;
+}
+.banner a:hover{
+  color: #C69453;
+  background-color: #fff;
+}
+
+
+/* service-section */
+.service-section{
+  padding: 50px 0 100px;
+}
+.teem-bio-box{
+  width: 20%;
+  margin-left: 4%;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px #ddd;
+  transition: .5s;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.teem-bio-box:last-child{
+  margin-right: 0;
+}
+
+.img-sec{
+  width: 100%;
+  text-align: center;
+}
+.teem-bio-box img{
+  width: 30%;
+  margin-top: 30px;
+  transform: rotateY(0);
+  transition: .5s;
+}
+.teem-bio-box h4{
+  font-size: 16px;
+  padding: 30px 10px 10px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.teem-bio-box p{
+  font-size: 14px;
+  padding: 0 10px 30px;
+  font-weight: 300;
+  color: #999;
+}
+.teem-bio-box .service-btn{
+  padding: 10px 15px;
+  background-color: #C69453;
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  transition: .5s;
+}
+.teem-bio-box:hover{
+  background-color: #ddd;
+}
+.teem-bio-box:hover .service-btn{
+  background-color: #fff;
+  color: #C69453;
+}
+.teem-bio-box:hover .img-sec img{
+  transform: rotateY(360deg);
+}
+.teem-bio-box .service-btn:hover{
+  background-color: #555;
+  color: #fff;
+  transform: translateY(8px);
+}
+
+/* about-section */
+.about-section{
+  padding: 100px 0 50px;
+}
+.about-left{
+  width: 48%;
+  text-align: right;
+}
+.about-right{
+  width: 48%;
+}
+.about-right h1{
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.about-right h1 span{
+  color: #C69453;
+}
+.about-right p{
+  font-size: 16px;
+  color: #555;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.about-right details {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.about-btn{
+  padding: 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  background-color: #000;
+  transition: .5s;
+}
+.about-btn:hover{
+  background-color: #C69453;
+  color: #fff;
+}
+
+/* contact-section */
+.contact-section{
+  padding: 50px 0 100px;
+  background: url(img/contact.jpg) no-repeat center center;
+  background-size: cover;
+}
+.contact-left{
+  width: 45%;
+  margin-left: 120px;
+}
+.contact-content{
+  width: 90%;
+}
+.contact-right{
+  width: 50%;
+}
+.contact-left h1{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.contact-left p{
+  margin-bottom: 20px;
+}
+.con-fm{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0px 0px 5px 0 #ddd;
+}
+.form-btn{
+  padding: 20px 30px;
+  background-color: #C69453;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* footer-section */
+.footer-section{
+  padding: 40px 0;
+  background-color: #6D6D6D;
+}
+
+.footer-left p{
+  color: #ddd;
+  font-size: 14px;
+}
+.footer-right{}
+.footer-right ul{
+  margin-right: 20px;
+}
+.footer-right ul li{
+  display: inline-block;
+  list-style: none;
+}
+.footer-right ul li a{
+  display: block;
+  color: #ddd;
+  padding: 0 15px;
+}
